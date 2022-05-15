@@ -22,8 +22,8 @@ Therefore, semi-logarithmic charts can be of immense help especially when plotti
 The underlying chart patterns will be revealed more clearly in semi-logarithmic scale charts.
 
 
-#Technical Analysis
-**Continue with technicalAnalysis.py**
+#MovingAverage
+**Continue with MovingAverage.py**
 Exponential Moving Average (EMA) (a.k.a. exponentially weighted moving average) is a type of moving average (MA) that places a greater weight and significance on the most recent data points.
 
 **Moving Average Convergence Divergence (MACD)**
@@ -32,3 +32,5 @@ The Moving Average Convergence Divergence (MACD) indicator is used to reveal cha
 One of the simplest strategy established with MACD, is to identify MACD crossovers. The rules are as follows.
 Buy signal: MACD rises above the signal line
 Sell signal: MACD falls below the signal line
+
+**It also includes backtesting, model evaluation and sharpe ratio**
