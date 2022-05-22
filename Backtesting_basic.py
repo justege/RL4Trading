@@ -6,7 +6,7 @@ import yfinance as yf
 
 cerebro = bt.Cerebro()
 
-df = yf.download('AAPL', start = '2010-01-01')
+df = yf.download('SONY', start = '2019-09-01')
 print(df)
 
 
@@ -32,15 +32,20 @@ class SmaCross(bt.Strategy):
             self.close()  # close long position
 
 
+cerebro.broker.setcommission(commission=0.005)
+
+cerebro.addanalyzer(bt.analyzers.AnnualReturn, _name="Areturn")
 
 cerebro.addstrategy(SmaCross)
 
-cerebro.addsizer(bt.sizers.PercentSizer, percents=50)
+cerebro.addsizer(bt.sizers.PercentSizer, percents=90)
 
 
 feed = bt.feeds.PandasData(dataname=df)
 cerebro.adddata(feed)
-cerebro.run()
+teststrat = cerebro.run()
 cerebro.plot(iplot=False)
+
+print(teststrat[0].analyzers.Areturn.get_analysis())
 
 
