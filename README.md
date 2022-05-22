@@ -34,3 +34,12 @@ Buy signal: MACD rises above the signal line
 Sell signal: MACD falls below the signal line
 
 **It also includes backtesting, model evaluation and sharpe ratio**
+
+
+Portfolio_optimization.py calculates the Markowitz’ Efficient Frontier and shows the most risky symbols to be traded about. 
+"This approach proposes a framework to evaluate the risk and returns of a portfolio.
+Return of a portfolio is the mean returns per time step we can expect from that portfolio.
+Risk is the standard deviation of the daily return. This gives a measure of volatility of the stock.
+By plotting each portfolio in terms of its risk and return, asset managers can make informed decisions on the investment.
+The line of efficient frontier shows the portfolios with highest returns for a given risk profile."
+Source: https://medium.com/analytics-vidhya/portfolio-optimization-using-reinforcement-learning-1b5eba5db072
