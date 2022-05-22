@@ -91,6 +91,7 @@ pos_diff = positions.diff()
 
 pos_diff.to_csv('pos_diff.csv')
 
+
 # Add `holdings` to portfolio
 portfolio['holdings'] = (positions.multiply(df['Close'], axis=0)).sum(axis=1)
 
