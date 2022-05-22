@@ -43,3 +43,8 @@ Risk is the standard deviation of the daily return. This gives a measure of vola
 By plotting each portfolio in terms of its risk and return, asset managers can make informed decisions on the investment.
 The line of efficient frontier shows the portfolios with highest returns for a given risk profile."
 Source: https://medium.com/analytics-vidhya/portfolio-optimization-using-reinforcement-learning-1b5eba5db072
+
+
+**Basic_Rule_based_Alpaca.py** 
+This code come from the following source and is an introduction to paper trading.
+https://www.qmr.ai/cryptocurrency-trading-bot-with-alpaca-in-python/
