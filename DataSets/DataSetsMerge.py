@@ -7,6 +7,12 @@ import yfinance as yf
 import nasdaqdatalink
 import datetime
 import investpy
+from iexfinance.refdata import get_symbols
+from iexfinance.stocks import Stock
+from iexfinance.stocks import get_historical_data
+import requests
+
+
 import pandas_datareader as pdr
 
 
@@ -72,10 +78,30 @@ def InvestingData(Symbols):
         Investing_Dataframe.to_csv('DataSets/CSVs/04_Investing_Data.csv')
 
 
+def IEXCloudData(Symbols):
+
+    for Symbol in Symbols:
+        IEXCloud_Dataframe = get_historical_data(Symbol, output_format='pandas',token="pk_5388b6b6b6114878808420762f7d85a2",
+                                                 start='01/01/2007',
+                                                 end='23/06/2022'
+                                                 )
+        IEXCloud_Dataframe.to_csv('DataSets/CSVs/05_IEXCloud_Data.csv')
+
+
+def MarketStackData(Symbols):
+    r = requests.get('http://api.marketstack.com/v1/tickers/AAPL/intraday?access_key=d3649e8d39d918903b4332c915976fe7&date_from=2015-01-01&date_to=2022-06-23')
+    x = r.json()
+    data = r.json()['data']
+
+    MarketStack_Dataframe = pd.DataFrame.from_dict(data['intraday'])
+    MarketStack_Dataframe.to_csv('DataSets/CSVs/06_MarketStackData_Data.csv')
+
+
 #AlpacaData(Symbols)
 #YfinanceData(Symbols)
 #QuandlData(Symbols)
 #InvestingData(Symbols)
+MarketStackData(Symbols)
 
 
 
