@@ -5,8 +5,8 @@ from alpaca_trade_api.rest import REST, TimeFrame
 import pandas as pd
 
 BASE_URL = "https://paper-api.alpaca.markets"
-KEY_ID = <YOUR_ALPACA_KEY>
-SECRET_KEY = <YOUR_ALPACA_SECRET_KEY>
+KEY_ID = "PKJRA63D6M2HWKKTXOTW"
+SECRET_KEY = "I5WD7h3Wb6oUTeVuAYurhYvqiCWXSsGzBCigJUv7"
 
 # Instantiate REST API Connection
 api = REST(key_id=KEY_ID,secret_key=SECRET_KEY,base_url="https://paper-api.alpaca.markets")
@@ -15,7 +15,7 @@ api = REST(key_id=KEY_ID,secret_key=SECRET_KEY,base_url="https://paper-api.alpac
 bars = api.get_crypto_bars("BTCUSD", TimeFrame.Minute).df
 print(bars)
 
-SYMBOL = 'BTCUSD'
+SYMBOL = 'BTCUSDBTCUSD'
 SMA_FAST = 12
 SMA_SLOW = 24
 QTY_PER_TRADE = 1
