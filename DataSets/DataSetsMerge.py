@@ -23,9 +23,9 @@ Symbols = ['AAPL']
 
 def AlpacaData(Symbols):
     BASE_URL = "https://paper-api.alpaca.markets"
-    KEY_ID = "PKJRA63D6M2HWKKTXOTW"
+    KEY_ID = ""
     # Instantiate REST API Connection
-    SECRET_KEY = "I5WD7h3Wb6oUTeVuAYurhYvqiCWXSsGzBCigJUv7"
+    SECRET_KEY = ""
     api = tradeapi.REST(key_id=KEY_ID,secret_key=SECRET_KEY,base_url="https://paper-api.alpaca.markets")
     barTimeframe = "1D"  # 1Min, 5Min, 15Min, 1H, 1D
 
@@ -81,7 +81,7 @@ def InvestingData(Symbols):
 def IEXCloudData(Symbols):
 
     for Symbol in Symbols:
-        IEXCloud_Dataframe = get_historical_data(Symbol, output_format='pandas',token="pk_5388b6b6b6114878808420762f7d85a2",
+        IEXCloud_Dataframe = get_historical_data(Symbol, output_format='pandas',token="",
                                                  start='01/01/2007',
                                                  end='23/06/2022'
                                                  )
@@ -89,7 +89,7 @@ def IEXCloudData(Symbols):
 
 
 def MarketStackData(Symbols):
-    r = requests.get('http://api.marketstack.com/v1/tickers/AAPL/intraday?access_key=d3649e8d39d918903b4332c915976fe7&date_from=2015-01-01&date_to=2022-06-23')
+    r = requests.get('http://api.marketstack.com/v1/tickers/AAPL/intraday?access_key=&date_from=2015-01-01&date_to=2022-06-23')
     x = r.json()
     data = r.json()['data']
 
