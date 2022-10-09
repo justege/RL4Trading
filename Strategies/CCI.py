@@ -12,7 +12,7 @@ def CCI(data, ndays):
     return data
 
 # Retrieve the Nifty data from Yahoo finance:
-data = yf.download("AAPL", start="2020-01-01", end="2022-06-30")
+data = yf.download("SONY", start="2020-01-01", end="2022-10-06")
 data = pd.DataFrame(data)
 
 # Compute the Commodity Channel Index(CCI) for NIFTY based on the 20-day Moving average

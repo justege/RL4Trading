@@ -6,7 +6,7 @@ import yfinance as yf
 
 cerebro = bt.Cerebro()
 
-df = yf.download('SONY', start = '2019-09-01')
+df = yf.download('AAPL', start = '2018-01-01')
 print(df)
 
 

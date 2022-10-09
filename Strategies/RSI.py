@@ -20,7 +20,7 @@ def rsi(close, periods=14):
 
 
 # Retrieve the Apple Inc. data from Yahoo finance
-data = yf.download("AAPL", start="2010-01-01", end="2022-06-30")
+data = yf.download("SONY", start="2010-01-01", end="2022-10-07")
 
 # Call RSI function from the talib library to calculate RSI
 data['RSI'] = rsi(data['Close'])

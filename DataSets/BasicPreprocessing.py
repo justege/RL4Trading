@@ -7,8 +7,8 @@ import numpy as np
 key=""
 
 df = pdr.DataReader("AAPL",
-                       start='2010-12-1',
-                       end='2022-05-14',
+                       start='2017-01-01',
+                       end='2021-01-01',
                        data_source='yahoo')
 
 # generate descriptive statistics, e.g. central tendency and dispersion of the dataset
