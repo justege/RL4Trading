@@ -136,7 +136,7 @@ def data_split(df, start, end):
 
     return data
 
-df = yf.download(['AAPL','MSFT','TSLA','CL=F','GC=F'], start = '2018-01-01')
+df = yf.download(['AAPL','MSFT','TSLA','CL=F','GC=F'], start = '2019-10-09')
 
 #print(df['Close']['AAPL'])
 #print(df['Close']['SONY'])
